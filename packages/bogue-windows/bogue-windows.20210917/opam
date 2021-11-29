@@ -7,7 +7,7 @@ dev-repo: "git+https://github.com/sanette/bogue.git"
 doc: "http://sanette.github.io/bogue/Bogue.html"
 license: "ISC"
 build: [
-  ["dune" "build" "-p" "base" "-j" jobs "-x" "windows"]
+  ["dune" "build" "-p" "bogue" "-j" jobs "-x" "windows"]
 ]
 depends: [
   "ocaml-windows"             {>= "4.08.0"}
