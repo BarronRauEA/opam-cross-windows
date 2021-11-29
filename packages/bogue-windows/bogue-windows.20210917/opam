@@ -7,6 +7,7 @@ dev-repo: "git+https://github.com/sanette/bogue.git"
 doc: "http://sanette.github.io/bogue/Bogue.html"
 license: "ISC"
 build: [
+  ["dune" "subst"] {pinned}
   ["dune" "build" "-p" "bogue" "-j" jobs "-x" "windows"]
 ]
 depends: [
