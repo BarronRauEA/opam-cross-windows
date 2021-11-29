@@ -1,36 +1,43 @@
 opam-version: "2.0"
-maintainer: "Jane Street developers"
-authors: ["Jane Street Group, LLC"]
-homepage: "https://github.com/janestreet/base"
-bug-reports: "https://github.com/janestreet/base/issues"
-dev-repo: "git+https://github.com/janestreet/base.git"
-doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/base/index.html"
-license: "MIT"
+maintainer: "Vu Ngoc San <san.vu-ngoc@laposte.net>"
+authors: ["Vu Ngoc San <san.vu-ngoc@laposte.net"]
+homepage: "https://github.com/sanette/bogue"
+bug-reports: "https://github.com/sanette/bogue/issues"
+dev-repo: "git+https://github.com/sanette/bogue.git"
+doc: "http://sanette.github.io/bogue/Bogue.html"
+license: "ISC"
 build: [
   ["dune" "build" "-p" "base" "-j" jobs "-x" "windows"]
 ]
 depends: [
   "ocaml-windows"             {>= "4.08.0"}
-  "sexplib0-windows"          {>= "v0.14" & < "v0.15"}
-  "dune"              { >= "2.0.0"}
-  "dune-configurator"
+  "tsdl-image" {>= "0.3.0"}
+  "tsdl-ttf" {>= "0.3"}
+  "ocaml" {>= "4.08.0"}
+  "tsdl" {>= "0.9.7"}
+  "dune" {>= "2.7"}
+  "odoc" {with-doc}
 ]
-synopsis: "Full standard library replacement for OCaml"
+synopsis: "GUI library for ocaml, with animations, based on SDL2"
 description: "
-Full standard library replacement for OCaml
+bogue is a GUI library for ocaml, with animations, based on SDL2.
 
-Base is a complete and portable alternative to the OCaml standard
-library. It provides all standard functionalities one would expect
-from a language standard library. It uses consistent conventions
-across all of its module.
+This library can be used for games or for adding GUI elements to any
+ocaml program.
 
-Base aims to be usable in any context. As a result system dependent
-features such as I/O are not offered by Base. They are instead
-provided by companion libraries such as stdio:
+It uses the SDL2 renderer library, which makes it quite fast.
 
-  https://github.com/janestreet/stdio
+It is themable, and does not try to look like your desktop. Instead,
+it will look the same on every platform.
+
+Graphics output is scalable, and hence easily adapts to Hi-DPI
+displays.
+
+Programming with bogue is easy if you're used to GUIs with widgets,
+layouts, callbacks, and of course it has a functional flavor. It uses
+Threads when non-blocking reactions are needed.
 "
 url {
-  src: "https://github.com/janestreet/base/archive/v0.14.1.tar.gz"
-  checksum: "md5=e4419eae60f57e553b154856f0cacf42"
+  src: "https://github.com/sanette/bogue/archive/refs/tags/20210917.tar.gz"
+  checksum: "md5=dd71cf658cc3591236352a366eb306ed"
 }
