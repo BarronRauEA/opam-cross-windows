@@ -14,5 +14,5 @@ depends: [
 ]
 
 url {
-  src: "https://github.com/BarronRauEA/bogue.tar.gz"
+  src: "https://github.com/BarronRauEA/bogue/archive/refs/tags/20210917.tar.gz"
 }
