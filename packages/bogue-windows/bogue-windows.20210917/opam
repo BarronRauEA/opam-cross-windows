@@ -39,6 +39,6 @@ layouts, callbacks, and of course it has a functional flavor. It uses
 Threads when non-blocking reactions are needed.
 "
 url {
-  src: "https://github.com/sanette/bogue/archive/refs/tags/20210917.tar.gz"
+  src: "https://github.com/BarronRauEA/bogue/archive/refs/tags/20210917.tar.gz"
   checksum: "md5=dd71cf658cc3591236352a366eb306ed"
 }
