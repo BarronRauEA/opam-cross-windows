@@ -1,11 +1,5 @@
 opam-version: "2.0"
-maintainer: "Vu Ngoc San <san.vu-ngoc@laposte.net>"
-authors: ["Vu Ngoc San <san.vu-ngoc@laposte.net"]
-homepage: "https://github.com/sanette/bogue"
-bug-reports: "https://github.com/sanette/bogue/issues"
 dev-repo: "git+https://github.com/BarronRauEA/bogue.git"
-doc: "http://sanette.github.io/bogue/Bogue.html"
-license: "ISC"
 build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" "bogue" "-j" jobs "-x" "windows"]
@@ -18,25 +12,7 @@ depends: [
   "dune" {>= "2.7"}
   "odoc" {with-doc}
 ]
-synopsis: "GUI library for ocaml, with animations, based on SDL2"
-description: "
-bogue is a GUI library for ocaml, with animations, based on SDL2.
 
-This library can be used for games or for adding GUI elements to any
-ocaml program.
-
-It uses the SDL2 renderer library, which makes it quite fast.
-
-It is themable, and does not try to look like your desktop. Instead,
-it will look the same on every platform.
-
-Graphics output is scalable, and hence easily adapts to Hi-DPI
-displays.
-
-Programming with bogue is easy if you're used to GUIs with widgets,
-layouts, callbacks, and of course it has a functional flavor. It uses
-Threads when non-blocking reactions are needed.
-"
 url {
   src: "https://github.com/BarronRauEA/bogue/archive/refs/tags/20210917.tar.gz"
 }
