@@ -11,8 +11,9 @@ build: [
   ["dune" "build" "-p" "bogue" "-j" jobs "-x" "windows"]
 ]
 depends: [
-  "ocaml-windows"             {>= "4.08.0"}
+  "ocaml-windows" {>= "4.08.0"}
   "tsdl-image" {>= "0.3.0"}
+  "tsdl-ttf" {>= "0.3"}
   "ocaml" {>= "4.08.0"}
   "tsdl" {>= "0.9.7"}
   "dune" {>= "2.7"}
