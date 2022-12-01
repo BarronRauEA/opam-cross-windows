@@ -8,7 +8,7 @@ if [ -z "${SYSTEM_TYPE}" ]; then
 fi
 
 if [ -z "${OCAML_VERSION}" ]; then
-  OCAML_VERSION=4.12.0
+  OCAML_VERSION=4.14.0
 fi
 
  COMPILER="${OCAML_VERSION}"
@@ -88,7 +88,7 @@ PACKAGES=$(cd ${BASE_PWD}/packages && find . -maxdepth 2 -mindepth 2 -type d | c
 
 echo ""
 git remote set-branches origin '*'
-git fetch origin master
+git fetch origin main
 echo ""
 
 echo "${PACKAGES}" | while read PACKAGE; do
@@ -96,7 +96,7 @@ echo "${PACKAGES}" | while read PACKAGE; do
     build_package "${PACKAGE}"
   else
     PACKAGE_DIR=`echo ${PACKAGE} | cut -d'.' -f 1`
-    RET=$(cd "${BASE_PWD}/packages/${PACKAGE_DIR}/${PACKAGE}" && git diff --name-only HEAD origin/master .)
+    RET=$(cd "${BASE_PWD}/packages/${PACKAGE_DIR}/${PACKAGE}" && git diff --name-only HEAD origin/main .)
 
     if [ -n "${RET}" ]; then
       build_package "${PACKAGE}"
